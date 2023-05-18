@@ -2,11 +2,21 @@
 <html>
     <head>
         <title>Forms</title>
+        <style>
+            button {
+                background-color: red;
+                color: white;   
+            }
+            .button2 {
+                background-color: blue;
+            }
+        </style>
     </head>
     <body> <!-- body is to display -->
 
-        <!-- form in html --> 
-        
+        <!-- form in html -->
+        <h1>Registration Form</h1> 
+        <h3>Student Deatails</h3>
         <form>
             <!-- field as firstName -->
             <!--br and <div></div> for next line-->
@@ -52,10 +62,46 @@
                 </select>
 
             </div>
+
+            <!-- Date of Birth-->
+            <div>
+                <label>Enter Date of Birth</label>
+                <input type="date" name="dateOfBirth">
+            </div>
+
+            <div>
+                <label>Upload File</label>
+                <input type="file" name="uploadFile">
+            </div>
+
+            <div>
+                <label>Enter Age</label>
+                <input type="number" name="age" placeholder="Enter Age">
+            </div>
+            <!-- Mobile Number-->
+            <div>
+                <label>Enter MobileNumber</label>
+                <input type="tel" name="mobileNumber" placeholder="123-45-678"> <!-- tel is attribute type of type-->
+            </div>
+            <!-- Adress -->
+            <div>
+                <label>Enter Address</label>
+                <textarea cols="10" rows="5"></textarea>
+            </div>
+
+            <div>
+                <label>Select Courses</label>
+                <input type="checkbox" name="course1">Java
+                <input type="checkbox" name="course2">HTML
+            </div>
+
+                <button type="submit">Register</button>
+                <button type="reset" class="button button2">Reset</button>
         </form>
 
-        <!-- name.github.io-->
-        <!-- Table - movies, city -->
+        <!-- how to add mobile number, adress -->
+        <!-- In tables merge cells , attributes called rowspan, colspan -->
+        <!-- create facebook reg page  -->
 
     </body>
 </html> 
