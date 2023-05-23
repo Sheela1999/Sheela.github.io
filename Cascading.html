@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Cascading StyleSheet</title>
+        <style>
+            /*selector {
+                property : value ;
+                property1 : value1;
+                property2 : value2; 
+            } */
+
+         /*   h1 {
+                color:aqua;
+                font-size: 100px;
+                text-transform:capitalize ; 
+                text-decoration: dotted underline;
+            }
+
+            h2{
+                color:aqua;
+                font-size: 100px;
+                text-transform:capitalize ; 
+                text-decoration: dotted underline;
+            } */
+
+            h1,h2,h3,h4,h5,h6{
+                color: brown;
+                font-display: 100px;
+                text-transform: capitalize; 
+                text-decoration: overline underline;
+                text-align: center;
+                /* background-color: aliceblue;  */
+            }
+            ol{
+                color: brown;
+                font-size: large;
+                font-style: italic;
+                background-color: palegreen;
+            }
+            ul{
+                color: blue;
+                font-size: x-large;
+                font-weight: 100;
+                background-color: peru;
+            }
+            
+            table{
+                color: blueviolet;
+                font-style: oblique;
+                border-color: purple;
+                padding: 5dvh;
+                background: scroll;
+                background-color: pink;
+                border-style: double;
+                
+            }
+            th{
+                color: black;
+                font-style: normal;
+                font-size: large;
+            }
+            tr {
+                border-color: red;
+            }
+            td{
+                color: blue;   
+            }
+
+            body {
+                    background-color: mediumturquoise;   
+
+                    /* The image used */
+                     background-image: url('../images/img.jpg');
+
+                    /* Full height */
+                    height: 100%; 
+
+                    /* Center and scale the image nicely */
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+}
+
+            .classSelector{
+                color: white;
+                font-size: 30px;
+            }
+
+            #idSelector{
+                color: red;
+            }
+
+            #idSelector1{
+                color: black;
+                font-size: 50px;
+
+            }
+
+            #idSelector2{
+                color: magenta;
+                font-style: italic;
+                font-size: 30px;
+                font-display: initial;
+                font-variant: small-caps;
+
+            }
+
+            #idSelector3{
+                color: mediumseagreen;
+                text-align: start;
+                text-decoration: dashed underline;
+                text-transform: uppercase;
+                text-indent: 10cm;
+                text-decoration-line: underline;
+                text-decoration-color: black;
+                text-align-last: justify;
+                text-decoration-style: wavy;
+                text-indent: 5dvb;
+                
+            }
+            
+            /* capitalize means make first letter should be capital in the word */
+            /* types of selector
+            1. element selector
+            2. grouping selector - instead of writing multiple times we can group
+            3. class selector - we can reuse class name
+            4. Id Selector - we cant reuse the id selector, highest priority than class selector, element selector
+            The id of an element is unique within a page, so the id selector is used to select one unique element.
+            */
+        </style>
+
+    </head>
+    <body>
+            <!-- css - style tag -->
+            <h1>CSS - Cascading StyleSheet</h1>
+            <h2> Element Selector</h2>
+            <h3> Bangalore</h3>
+            <h4> applying Css</h4>
+            <h5> Belagavi</h5>
+            <h6> BTM</h6>
+
+            <ol>
+                <li>HP</li>
+                <li>Lenovo</li>
+                <li>Asus</li>
+            </ol>
+            <ul>
+                <li> Developer</li>
+                <li> Software</li>
+                <li> Hardware</li>
+            </ul>
+            <table border="1">
+                <tr>
+                    <th>Sl.No</th>
+                    <th>Name</th>
+                    <th>Adress</th>
+                    <th>pincode</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Sheela</td>
+                    <td>Belagavi</td>
+                    <td>591235</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Nikitha</td>
+                    <td rowspan="2">Shivmoga</td>
+                    <td rowspan="2">687987</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Pallavi</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Gowri</td>
+                    <td>Kalburgi</td>
+                    <td>567432</td>
+                </tr>
+            </table>
+
+            <!-- how to add background image -->
+             <!-- <div class="section"><img src="C:\Users\india\Desktop\HTML\Imges\img.jpg" alt=""></div>  -->
+           
+             <h1 class="classSelector"> Are you guys learning Css? </h1>
+             <h2 class="classSelector" id="idSelector" > Are you guys learning HTML? </h2>
+             <h1 class="classSelector" id="idSelector1" > Are you guys learning Java? </h1>
+
+             <!-- id Selector (highest priority)
+                  class selector
+                  element selectro-->
+             
+             <!-- element selector 
+                  class selector
+                  id selector
+                  element selector, class selectro, id selector
+
+                  use css property of
+                  font-, text-   -->
+
+             <h1> I am Sheela</h1>
+             <h2 class="classSelector"> From Belagavi</h2>
+             <h3 id="idSelector2"> Graduated From ALVAS INSTITUTE OF ENGINEERING AND TECHNOLOGY</h3>
+
+             <h4 class="classSelector" id="idSelector3"> Electronics And Communication Engineering</h4>
+
+             <!-- CSS Box Model 
+                properties..
+                 1. padding
+                2. border
+            3.margin-->
+    </body>
+</html>
