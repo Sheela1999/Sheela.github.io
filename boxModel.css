@@ -1,0 +1,62 @@
+.square{
+    border: 2px solid goldenrod;
+    height: 100px;
+    width: 100px;
+}
+
+.rectangle{
+    border: 2px solid green;
+    height: 100px;
+    width: 200px;
+}
+
+.square1{
+    border: 2px solid blue;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+.rectangle1{
+    border: 2px solid maroon;
+    height: 100px;
+    width: 200px;
+    display: inline-block;
+}
+
+.square2{
+    border: 2px solid purple;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+.rectangle2{
+    border: 2px solid green;
+    height: 100px;
+    width: 200px;
+    display: inline-block;
+    float: right;
+}
+
+/* descendant selector */
+div p {
+    color: red;
+}
+
+/* child selector */
+div > p {
+    color: green;
+}
+
+/* adjacent sibling selector */
+div + p{
+    color: blue;
+}
+
+/* general sibling selector */
+div ~ p {
+    color: aqua;
+}
+
+
