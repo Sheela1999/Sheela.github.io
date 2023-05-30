@@ -1,0 +1,95 @@
+.positionfixed{
+    position: fixed;
+    /* top: 0;  */
+    right: 0;
+    /* right: 20px; */
+    /* left: 0; */
+    bottom: 0;
+    /* top: 0; */
+}
+
+.positionright{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.positionrelative{
+    position: relative;
+    /* position: fixed; */
+    left: 400px; 
+    bottom: 0;
+}
+
+.positionabsolute{
+    position: absolute;
+    left: 0;
+    /* top: 0; */
+}
+
+.positionRahul{
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+
+.positionRohit{
+    position: absolute;
+    top: 0;
+    left:225px
+
+}
+
+.positionMaxwell{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.positionHardik{
+    position: absolute;
+    bottom: 0;
+    left: 220px;
+}
+
+ .positionVirat{
+    position: absolute;
+    left: 110px;
+    top: 72.362px;
+    color: blue;
+    font-size: x-large;
+} 
+
+.relative{
+    position: relative;
+}
+
+ul{
+    list-style-type: none;  /* circle and square bullets to remove these we use list style type*/
+    background-color: black;
+}
+
+li {
+    display: inline-block; /* to come in horizontal(if we remove inline block display it will in vertical
+    navigation bar)*/
+    padding: 10px; 
+    color: white;
+    background-color: aqua;
+}
+
+li a{
+     text-decoration: none; /*to remove underline  */
+    color: white;
+}
+
+/* Pseudo selector */
+ /* pseudo selector (to change background color and highlight)  */
+
+li:hover{
+    background-color: green;
+}
+
+/* bluring image */
+img{
+    opacity: 0.5;
+}
