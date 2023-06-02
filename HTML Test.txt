@@ -1,0 +1,187 @@
+1) Basic Structure Of HTML?
+Ans: <DOCTYPE html>
+     <html>
+	      <head>
+		        <title>HTML Test <title>
+	      </head>
+		      <body>
+			  .
+			  .
+			  .
+    </body>		  
+	<html>
+	
+2)what is element?
+Ans: element is used to display a content using some elements
+for example <h1></h1>, <p> </p>....etc
+
+3)what is attribute?
+Ans: Attribute is used to add a information within the tag.
+
+4)what is block Level and inline Level Elements?
+Ans: Block Level Elements: These elemets take full line of the content or space, if wrote any content it will take the full space of that line.
+
+Inline Level Elements: These elemets will take the how much the content is needed that much space only it will take.
+
+5)difference between div and span
+Ans: div tag is to create next line in html or new line in html
+     Span tag is used to continue in same line 
+	 
+6)write Syntax for creating list(ordered and unordered list)
+Ans: ordered list
+<ol type="1,A,a,i,I" start="6">
+        <li>..</li>
+		<li>..</li>
+	</ol>
+	
+     unordered list
+	<ul type="circle,disc,square">
+	    <li>..</li>
+		<li>..</li>
+	</ul>
+	
+*)ordered list number is default
+*)unordered list disc is default
+
+7)<table border="1">
+      <tr>(table row)
+	    <th>Sl.No</th>
+		<th>Bag Brand</th>
+		<th>Price</th>
+		<th>color</th>
+		<th>type</th>
+	</tr>
+	<tr>
+	     <td>1</td>
+		 <td>Gucci</td>
+		 <td rowspan="2">1000</td>
+		 <td>black</td>
+		 <td>Travel Bag</td>
+	</tr>
+	<tr>
+	     <td>2</td>
+		 <td>leather Bag</td>
+		 <td>white</td>
+		 <td>Hand Bag</td>
+	</tr>
+	<tr>
+	     <td>3</td>
+		 <td>SkyBag</td>
+		 <td>500</td>
+		 <td>blue</td>
+		 <td rowspan="2">backPack</td>
+	</tr>
+	<tr>
+	     <td>4</td>
+		 <td>Nike</td>
+		 <td>1500</td>
+		 <td>Golden</td>
+	</tr>
+	<tr>
+	     <td>5</td>
+		 <td>Puma</td>
+		 <td>2500</td>
+		 <td>Peach</td>
+		 <td>Laptop BackPack</td>
+	</tr>
+</table>
+	
+8) craete Form
+Ans:
+<form>
+     <div>
+	 <label>Enter FirstName</label>
+	 <input type="text" name="firstName" placeholder="Enter FirstName">
+	 </div>
+	 
+	 <div>
+	 <label>Enter LastName</label>
+	 <input type="text" name="lastName" placeholder="Enter LastName">
+	 </div>
+	 
+	 <div>
+	 <label> Enter Gender <label>
+	 <input type=radio name=gender>male
+	 <input radio=radio name=gender>female
+	 <input radio=radio name=gender>other
+	 </div>
+	 
+	 <div>
+	 <label> Enter DateOfBirth</label>
+	 <input type="date" name=dateOfBirth" placeholder="Enter DateOfBirth">
+	 </div>
+	 
+	 <div>
+	 <label> Enter phone Number</label>
+	 <input type="tel" name="phoneNumber" placeholder="Enter phone Number">
+	 <select>
+	 <option>Date</option>
+	 <option>1</option>
+	 <option>2</option>
+	 </select>
+	 
+	 <select>
+	 <option>Month<option>
+	 <option>Jan</option>
+	 <option>feb</option>
+	 </select>
+	 
+	 <select>
+	 <option>1999<option>
+	 <option>2000</option>
+	 </select>
+	 </div>
+	 
+	 <div>
+	 <label>Enter Age</label>
+	 <input type="number" name="age" placeholder="Enter Age">
+	 </div>
+	 
+     <div>
+	 <label>Enter EmailId</label>
+	 <input type"email" name="email" placeholder="Enter EmailId">
+	 </div>
+	 
+	 <div>
+	 <label>Enter Password</label>
+	 <input type="password" placeholder="Eneter Password">
+	 </div>
+	     
+	<div>
+     <label>Enter Address</label>
+	 <input type="text" name="address" placeholder="E
+     <textarea rowspan="5" colspan="5"> </textarea>
+    </div>
+	
+	<div>
+	<label>Choose File</label>
+	<input type="file" name="file" placeholder="Choose File">
+	</div>
+
+    <div>
+    <button>submit</button>
+    </div>	
+	
+9)write special symbols in html
+Ans: &nbsp - no break 
+     super script - sup
+     sub Script - sub
+	 &trademark
+	 del
+
+10) create img and hyperlink in html
+Ans: <img src:"//----------">
+    
+	hyperlink
+	<a href="------------">...</a>
+	
+11)create audio, video tag in html
+ans: <audio src="----------" controls>....</audio>
+
+<video src="------------"controls>....</video>
+
+12)display instagram page in html page
+ans:<iframe src="www.instagram.com">instagram</iframe>
+
+
+	
