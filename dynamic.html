@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript</title>
+    <script>
+        //console.log() (print statement and log is function)
+        //System.out.println()
+
+        console.log("we are learning Java Script")
+
+        //how to vatiables in JS
+        //Datatypes variableName;
+        //var variableName;
+
+        var javascript = 'java';
+        console.log(javascript)
+
+        javascript = 'javascript';
+        console.log(javascript)
+        console.log(typeof(javascript)) //typeof, it will give datatype
+        
+        var b = 10;
+        console.log(b)
+        console.log(typeof(b));
+
+        b = 'java';
+        console.log(b);
+
+        console.log(typeof(b));
+
+        var b = 10.76;
+        console.log(typeof(b))
+
+        var a = true;
+        console.log(typeof(true));
+
+        a = true;
+        console.log(a)
+
+        var d;
+        console.log(d)
+        console.log(typeof(d))
+
+        //datatypes in javascript - number, string, boolean, undefined
+
+        //to declare function in Javascript
+        function display(){
+            console.log("calling dispaly function")
+        }
+        display()
+
+        function add(x, y){
+            console.log("calling parameterized function")
+            console.log(x)
+            console.log(y)
+            return x+y
+        }
+        console.log(add(10,20))
+
+        function sub(x,y){
+            return x-y
+        }
+        console.log(sub(30,10))
+
+        //syntax of JacaScript
+        //print statemnt
+        //declare variables
+
+
+        //how to declare function
+        //how to pass argumented function
+        //how to call function
+        //Events
+        //event Handling
+        //how to send data from html to javascript
+        //how to send data from javascript to html
+        //Form validation
+        //reg data, login page, home page
+        //storage - data in the browser
+
+        function clickMe(){
+                console.log("user clicking the button")
+
+                 //how to send data from javascript to html
+                var clickMessage = document.getElementById("clickMessage")
+                //- document is object--getelementby id is function
+                clickMessage.innerHTML = "user clicked a button"
+                clickMessage.style.color= 'green'
+
+                var clickColor = document.getElementById("clickColor")
+                clickColor.style.backgroundColor='red'
+                clickColor.style.color='white' // this color is for text
+        }
+
+        function submit(){
+            console.log("user clicking on submit button")
+            
+        }
+
+        function registration(){
+           console.log("user clicking on registration button") 
+        }
+
+        function mouseOver(){
+            console.log("User mouseover a button")
+        }
+
+        function addition(){
+            //how to send data from html to javascript
+            console.log("calling from html page")
+
+            //form values
+
+            var num1 = document.getElementById("num1")
+            console.log(num1)
+            console.log(num1.value)
+
+            var num2 = document.getElementById("num2")
+            console.log(num2)
+            console.log(num2.value)
+
+            //console.log(num1.value + num2.value) convert string to integer
+
+            var result = parseInt(num1.value) + parseInt(num2.value)
+            console.log(result)
+
+            var addition = document.getElementById("addition")
+            console.log(addition)
+            addition.innerHTML = 'ADD Result is' + result
+
+            addition.style.color='orange'
+            var buttonColor = document.getElementById("buttonColor")
+            buttonColor.style.backgroundColor='Blue'
+            buttonColor.style.color='white'
+        }
+
+        function subtraction(){
+            console.log("calling the sub function from html")
+
+            var num1 = document.getElementById("num1")
+            console.log(num1)
+            console.log(num1.value)
+
+            var num2 = document.getElementById("num2")
+            console.log(num2)
+            console.log(num2.value)
+
+            var res = parseInt(num1.value) - parseInt(num2.value)
+            console.log(res)
+
+            var subtraction = document.getElementById("subtraction")
+            console.log(subtraction)
+            subtraction.innerHTML = 'sub Result is' + res
+
+            subtraction.style.color='red'
+
+            var buttonSubColor = document.getElementById("buttonSubColor")
+            buttonSubColor.style.backgroundColor='green'
+            buttonSubColor.style.color='white'
+            
+        }
+
+        function multiplication(){
+            console.log("calling the multiple function from html")
+
+            var num1 = document.getElementById("num1")
+            console.log(num1)
+            console.log(num1.value)
+
+            var num2 = document.getElementById("num2")
+            console.log(num2)
+            console.log(num2.value)
+
+           var multi = parseInt(num1.value) * parseInt(num2.value)
+           console.log(multi)
+
+           var multiplication = document.getElementById("multiplication")
+            console.log(multiplication)
+            multiplication.innerHTML = 'multiple Result is' + multi
+
+            multiplication.style.color='blue'
+
+           var buttonMultiColor = document.getElementById("buttonMultiColor")
+            buttonMultiColor.style.backgroundColor='Orange'
+            buttonMultiColor.style.color='white'
+        }
+
+        function division(){
+            console.log("calling the div function from html")
+
+            var num1 = document.getElementById("num1")
+            console.log(num1)
+            console.log(num1.value)
+
+            var num2 = document.getElementById("num2")
+            console.log(num2)
+            console.log(num2.value)
+
+            var div = parseInt(num1.value) / parseInt(num2.value)
+            console.log(div)
+
+            var division = document.getElementById("division")
+            console.log(division)
+            division.innerHTML = 'div Result is' + div
+
+            division.style.color='green'
+
+            var buttonDivColor = document.getElementById("buttonDivColor")
+            buttonDivColor.style.backgroundColor='Blue'
+            buttonDivColor.style.color='white'
+
+        }
+
+    </script>
+
+</head>
+<body>
+    <!-- console to html page we will use body then in script function -->
+      <button onclick="clickMe()" id="clickColor"> Click Me </button> <!-- if we want to perform task we have to call function(to get a response )
+       event name is on click attach one fuction like click me (onclick is attribute)-->
+       <span id="clickMessage"></span>
+
+     <button onclick="submit()">submit</button>
+
+     <button onclick="registration()">Registration</button>
+
+     <button onmouseover="mouseOver()" onclick="clickMe()">Mouse Over</button> <!-- onmouseoverv is event-->
+
+     <form>
+        <div>
+            <label>Enter Number1</label>
+            <input type="text" name="num1" id="num1">
+        </div>
+        <div>
+            <label>Enter Number2</label>
+            <input type="text" name="num2" id="num2">
+        </div>
+        <button type="button" onclick="addition()" id="buttonColor">addition</button>
+        <!-- (using this we will not access)first we used type submit and it only submit the form when we use a button it will 
+            act like button show the res-->
+        <button type="button" onclick="subtraction()" id="buttonSubColor">Subtraction</button>
+        <button type="button" onclick="multiplication()" id="buttonMultiColor">Multiplication</button>
+        <button type="button" onclick="division()" id="buttonDivColor">Division</button>
+
+        <!-- clicking on addition or any button i need to get result in html page only for example
+        addition button res is 40 so we use this span tag-->
+        <span id="addition"></span> <!-- id addition is address-->
+        <span id="subtraction"></span>
+        <span id="multiplication"></span>
+        <span id="division"></span>
+     </form>
+</body>
+</html>
