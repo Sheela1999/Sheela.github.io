@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays</title>
+        <script>
+                let arr = []
+                arr = [1, 2, 3, 4, 5]
+                console.log(arr)
+                console.log(arr.length)
+                console.log("---------------------------------------------------------");
+                for(let i=1; i<=arr.length; i++){
+                    console.log(arr[i-1])
+                }
+
+                let arr1 = [1, 'java', true, -2, false]//you can add dynamic elements
+                for(let i=0; i<arr1.length; i++){
+                    console.log(arr1[i])
+                }
+
+                let arr3 = []
+                arr3.push('javascript')
+                //it add the element at the end of an array
+                console.log(arr3)
+                arr3.push("array")
+                arr3.push("dynamic")
+                console.log(arr3)
+
+                //Remove the element at the end of an array
+                arr3.pop()
+                console.log(arr3)//javascript, array it will remove dynamic bcz it end of array
+
+                //it add element at the beginning of an array
+                arr3.unshift("unshift")
+                console.log(arr3)
+                arr3.unshift("addingElement")
+                console.log(arr3)
+
+                //shift function remove the element from the biginning
+                arr3.shift()
+                console.log(arr3)
+
+                let tree= {
+                    'name' : 'mango',
+                    'lifespan' : 10,
+                    'season' : 'inSummer'
+                }
+                console.log(tree)
+
+                let coconutTree = {
+                    'name' : 'coconut',
+                    'lifespan' : 100,
+                    'season' : 'summer'
+                }
+                console.log(coconutTree)
+                console.log("---------------------------------------------");
+
+                let trees = []
+                trees.push(tree)
+                trees.unshift(coconutTree)
+                console.log(trees)
+                for(let i=0; i<trees.length; i++){
+                    console.log("trees name=============")
+                    console.log(trees[i].name)
+                    console.log("lifespan ================")
+                    console.log(trees[i].lifespan)
+                    console.log(trees[i].season)
+
+                    Object.keys(coconutTree)
+                }
+                for(let j=0; j<trees.length; j++){
+                    console.log(trees[j].lifespan)
+                }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

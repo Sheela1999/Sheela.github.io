@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <script>
+            var a
+            console.log(a)
+            a =10
+            console.log(a)
+
+            let b
+            console.log(b)
+            b = 'javascript'
+            console.log(b)
+            //let b // console.log(b) throw an error like already exist or declared
+
+            const PI = 3.14
+            console.log(PI)
+            //var, let,const // how to navigate to another page in javascript
+            // == and ===
+            function login(){
+                        console.log("Calling login Function")
+
+                var loginColor = document.getElementById("loginColor")
+                    loginColor.style.backgroundColor = 'green'
+                    loginColor.style.color = 'white'
+
+                    var email = document.getElementById("email")
+                    console.log(email.value)
+                    let password = document.getElementById("password") //let is another type of variable like var
+                    console.log(password.value)                        //leteral - let (limited scope)
+                    let registerDataString = localStorage.getItem("NoKey") //var global variable
+                    console.log(registerDataString)
+                    console.log(registerDataString.email)
+// in the let we cant use 2 variable like let b and one more time we use let b it will show that already exist
+//constant is like final we can't change the value const PI = 3.14, console.log(PI) always we have to write 
+//in upper case like PI
+
+                    //to create string to object
+                    let registerObject = JSON.parse(registerDataString)
+                    console.log(registerObject)
+                    console.log(registerObject.email)
+
+                    //comparing 
+                    if(email.value == registerObject.email && 
+                    password.value == registerObject.password){
+                        console.log("Login Success")
+
+                        sessionStorage.setItem("username",registerObject.firstName)
+                        window.location.href = "../JavaScript/home.html" 
+
+                        //home page
+                        //date
+                       // == and ===
+                    }else{
+                        console.log("Invalid EmailId and Password")
+                    }
+            }
+        </script>
+    </head>
+    <body>
+                    <!-- <div>
+                        <h1>Instagram</h1>
+                    </div>
+        <form>
+                <div>
+                   <input type="text" id="email" placeholder="Email address or Phone Number">
+                   <span id="emailMessage"></span>
+                </div>
+                <div>
+                   <input type="password" id="password" placeholder="Password">
+                   <span id="passwordMessage"></span>
+                </div>  -->
+
+                <form>
+                    <div>
+                        <label>Enter EmailId</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div>
+                        <label>Enter Password</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                </form>
+            
+            <!-- <button type="submit" onclick="login()" id="loginColor">Login</button> -->
+            <button type="button" onclick="login()" id="loginColor">Login</button>
+        </form>
+    </body>
+</html>

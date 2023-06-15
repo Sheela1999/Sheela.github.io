@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <script>
+           function register(){
+            console.log("calling register function")
+                 var firstName = document.getElementById("firstName")//return html element
+                 console.log(firstName)
+                 console.log(firstName.value)
+
+                 var reg = document.getElementById("firstNameMessage")
+                 reg.innerHTML = ''
+                 if(firstName.value == ''){
+                    console.log("Please Enter FirstName")
+
+                    console.log(firstNameMessage)
+                    console.log(firstNameMessage.value)//.value is give the value
+                    reg.innerHTML = "Please Enter FirstName"
+                    firstNameMessage.style.color = 'red'
+
+
+                    var regColor = document.getElementById("registerColor")
+                    regColor.style.backgroundColor = 'green'
+                    regColor.style.color = 'white'
+                    return false
+                 }
+
+                 var lastName = document.getElementById("lastName")
+                 console.log(lastName)
+                 console.log(lastName.value)
+                 var lastNameMessage = document.getElementById("lastNameMessage")
+                 lastNameMessage.innerHTML = ''
+                 if(lastName.value == '') {
+                      console.log("Please Enter lastName")
+                
+                 
+                 console.log(lastNameMessage)
+                 console.log(lastNameMessage.value)// to get value
+                 lastNameMessage.innerHTML = "Please Enter lastName"
+                 lastNameMessage.style.color = 'red'
+                 return false
+                 }
+
+                 var email = document.getElementById("email")
+                 var emailMessage = document.getElementById("emailMessage")
+                 emailMessage.innerHTML = ''
+
+                 if(email.value == ''){
+                    console.log("Please Enter EmailId")
+                   
+                    emailMessage.innerHTML = "Please Enter EmailId"
+                    emailMessage.style.color = 'red'
+                    return false
+                 }
+                
+                 var password = document.getElementById("password")
+                  console.log("password length check:" + password.value.length)
+                  var passwordMessage = document.getElementById("passwordMessage")
+                  passwordMessage.innerHTML = ''
+                  var passwordMessage = document.getElementById("passwordMessage")
+                  passwordMessage.innerHTML= ''
+                  
+                 if(password.value == ''){
+                 console.log("Please Enter Password")
+                 //var passwordMessage = document.getElementById("passwordMessage") removing kept above
+                // to get value if not selected then only it print lile please enter password
+                 passwordMessage.innerHTML = "Please Enter Password"
+                 passwordMessage.style.color = 'red'
+                 return false
+                 }
+                 
+                 else if(password.value.length <5){
+                 console.log("Password is Weak")
+                 
+                 passwordMessage.innerHTML = "Password is Weak"
+                 passwordMessage.style.color = 'red'
+                 return false
+                 }
+                 
+                 //documnet.formname.fieldName (this is Validation)
+                 console.log(document.registration.gender)// we will get array here return html element
+                 //console.log(document.registration.gender[0])
+                 console.log(document.registration.gender[0].checked)
+                 console.log(document.registration.gender[1].checked)
+                 console.log(document.registration.gender[2].checked)
+
+                 var genderMessage = document.getElementById("genderMessage")
+                 genderMessage.innerHTML = ''
+                 if(document.registration.gender[0].checked == false && 
+                 document.registration.gender[1].checked == false &&
+                 document.registration.gender[2].checked == false){
+                    console.log("Please Select Gender")
+                   
+                   genderMessage.innerHTML = "Please Select Gender"
+                   genderMessage.style.color = 'red'
+                   return false
+                 }
+
+                 console.log(document.registration.city) //array
+                 console.log(document.registration.city.value) 
+                 //if(ocument.registration.city.value)
+                 
+                 var cityMessage = document.getElementById("cityMessage")
+                 cityMessage.innerHTML = ''
+                 if(document.registration.city.value == "0"){
+                    console.log("please Select City")
+                    
+                    cityMessage.innerHTML = "please Select City"
+                    cityMessage.style.color = 'red'
+                    return false
+                 }
+
+                 var mobileNumber = document.getElementById("mobileNumber")
+                 var mobileNumberMessage = document.getElementById("mobileNumberMessage")
+                 mobileNumberMessage.innerHTML = ''
+
+                 if(mobileNumber.value == ''){
+                    console.log("please Eneter mobile Number")
+
+                    mobileNumberMessage.innerHTML = "please Eneter mobile Number"
+                    mobileNumberMessage.style.color='red'
+                    return false
+                 }
+                 else if(mobileNumber.value.length < 10 && mobileNumber.value.length > 10){
+                    console.log ("Please Enter Valid Mobile Number")
+
+                    mobileNumberMessage.innerHTML = "Please Enter Valid Mobile Number"
+                    mobileNumberMessage.style.color='red'
+                    return false
+                 }
+
+                 var address = document.getElementById("address")
+
+                 var addressMessage = document.getElementById("addressMessage")
+                 addressMessage.innerHTML = ''
+
+                 if(address.value == ''){
+                   console.log("Please Enter Address")
+
+                   addressMessage.innerHTML = "Please Enter Address"
+                   addressMessage.style.color = 'red'
+                   return false
+                 }
+
+                 var file = document.getElementById("file")
+
+                 var fileMessage = document.getElementById("fileMessage")
+                 fileMessage.innerHTML = ''
+
+                 if(file.value == ''){
+                   console.log("Please Upload File")
+
+                   fileMessage.innerHTML = "Please Upload File"
+                   fileMessage.style.color = 'red'
+                   return false
+                 }
+
+                //-- to get know about which one selected from user all values in the browser 
+                console.log(firstName.value)
+                console.log(lastName.value)
+                console.log(email.value)
+                console.log(password.value)
+                //console.log(gender)
+                var genderData
+                if(document.registration.gender[0].checked == true){
+                    genderData = document.registration.gender[0].value
+                }else if(document.registration.gender[1].checked == true){
+                    genderData = document.registration.gender[1].value
+                }else if(document.registration.gender[2].checked == true){
+                    genderData = document.registration.gender[2].value
+                }
+                console.log(genderData)
+                //we are accessing property using . value
+                console.log(document.registration.city.value)
+                console.log(mobileNumber.value)
+                console.log(address.value)
+                console.log(file.value)
+
+                //to store in broweser
+                //storage = to store data
+                //browser 5MB of data
+                //2 type = local Storage -it is permanent storage
+                // sessionStorage - temporary storage 
+
+                localStorage.setItem("javaScript", "RegisterformData")
+                //to create object
+                var registerData = {
+                    "firstName": firstName.value,
+                    "lastName": lastName.value,
+                    "email": email.value,
+                    "password": password.value,
+                    "gender": genderData,
+                    "city": document.registration.city.value,
+                    "mobileNumber": mobileNumber.value,
+                    "address": address.value,
+                    "file": file.value
+                }
+                console.log(registerData)
+                console.log(typeof(registerData))
+                //to convert object to string
+                var registerDataString = JSON.stringify(registerData)
+                console.log(typeof(registerDataString))
+                console.log(registerDataString)
+                localStorage.setItem("NoKey",registerDataString)
+           }
+        </script>
+    </head>
+    <body>
+        <form name="registration">
+            <div>
+                <label>Enter First Name</label>
+                <input type="text" name="firstName" id="firstName" required>
+                <span id="firstNameMessage"></span>
+                <!-- <input type="text" name="firstName" required>
+                in the button type is submit it will show the pleaze fill out this field -->
+            </div>
+            <div>
+                <label>Enter Last Name</label>
+                <input type="text" name="lastName" id="lastName" required>
+                <span id="lastNameMessage"></span>
+            </div>
+            <div>
+                <label>Enter EmailId</label>
+                <input type="email" name="email" id="email">
+                <span id="emailMessage"></span>
+            </div>
+            <div>
+                <label>Enter Password</label>
+                <input type="password" name="password" id="password">
+                <span id="passwordMessage"></span>
+            </div>
+            <div>
+                <label>Select Gender</label>
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="Female">Female
+                <input type="radio" name="gender" value="Others">Others
+                <span id="genderMessage"></span>
+
+                <!-- document.formName.fieldName
+                     documnet.registration.Gender-->
+            </div>
+
+            <!-- City -->
+            <div>
+                <label>Select City</label>
+                <select name="city">
+                    <option value="0">--select City--</option>
+                    <option value="bangalore">Bangalore</option>
+                    <option>Belagavi</option>
+                    <option>Shivmoga</option>
+                    <option>Hassan</option>
+                    <option>Mysore</option>
+                </select>
+                <span id="cityMessage"></span>
+            </div>
+
+             <!-- adredd , phone number-->
+             <div>
+                <lebel>Enter MobileNumber</lebel>
+                <input type="tel" name="mobileNumber" id="mobileNumber">
+                <span id="mobileNumberMessage"></span>
+            </div>
+            <div>
+                <label>Enter Address</label>
+                <textarea cols="10" rows="5" id="address"></textarea>
+                <span id="addressMessage"></span>
+            </div>
+            <div>
+                <label>Upload File</label>
+                <input type="file" name="uploadFile" id="file">
+                <span id="fileMessage"></span>
+            </div> 
+            <button type="button" onclick="register()" id="registerColor">Register</button>
+
+            <div>
+                Already  registered, click to <a href="../Task/login.html" target="_blank">login</a>
+                <!--it will ask if register go to login page-->
+            </div>
+ <!-- 3 events 
+    onclick, mouseover, doubleclick-->
+           
+        </form>
+    </body>
+</html>
